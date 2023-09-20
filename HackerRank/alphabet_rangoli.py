@@ -1,15 +1,21 @@
 
 def print_rangoli(n):
-    for row in range(0, 2*n-1):
+    for row in range(n):
+
         rs = ''
-        for col in range(0, 4*n-3):
-            if col % 2 ==  1:
-                rs += "-"
-            else:  
-                if col == (2*n-1)+row*2 or col == (2*n-1)-row*2:
-                    rs += chr(97+col)
-                else:
-                    rs += '-'
+        counter = 0
+        for col in range(2*n-2):
+            if col == 2*n-1:
+                rs += chr(97+row)
+            
+            # if col % 2 == 0:
+            #     if col == 2*n-1:
+            #         rs += chr(97+(n-row-1))
+            # # print(f"[{row}, {col}]", end=' ')
+            # if col == (2*n-1)+row*2-1 or col == (2*n-1)-row*2-1:
+            #     rs += chr(97+(n-row-1))
+            # else:  
+            #     rs += '-'
               
         print(rs)
     
