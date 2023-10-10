@@ -1,11 +1,14 @@
 t = int(input())
-for score in range(t):
-    score = int(input())
-    if score >= 1900:
+
+for _ in range(t):
+    rating = int(input())
+
+    if rating >= 1900:
         print('Division 1')
-    elif score < 1900 and score >= 1600:
+    if rating >= 1600 and rating <= 1899:
         print('Division 2')
-    elif score < 1600 and score >= 1400:
+    if rating >= 1400 and rating <= 1599:
         print('Division 3')
-    else:
+    if rating <= 1399:
         print('Division 4')
+    
