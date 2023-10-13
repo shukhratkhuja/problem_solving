@@ -10,7 +10,6 @@ class Solution(object):
         nums.extend('_' for _ in range(len(l), llen))
         return len(l)
         
-
         """
         :type nums: List[int]
         :rtype: int
