@@ -1,3 +1,5 @@
+
+
 class Solution(object):
     def strStr(self, haystack:str, needle):
 
