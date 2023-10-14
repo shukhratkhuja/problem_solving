@@ -1,4 +1,4 @@
-
+# https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
 class Solution(object):
     def strStr(self, haystack:str, needle):
