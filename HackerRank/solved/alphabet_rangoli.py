@@ -1,24 +1,22 @@
 
 def print_rangoli(n):
-    for row in range(n):
 
-        rs = ''
-        counter = 0
-        for col in range(2*n-2):
-            if col == 2*n-1:
-                rs += chr(97+row)
+    ll = []
+    for row in range(n):
+        central_char_index = 97+n-row-1
+        chrlist = [chr(central_char_index)]
+        for i in range(1,row+1):
+            chrlist.append(chr(central_char_index+i))
+            chrlist.insert(0, chr(central_char_index+i))
             
-            # if col % 2 == 0:
-            #     if col == 2*n-1:
-            #         rs += chr(97+(n-row-1))
-            # # print(f"[{row}, {col}]", end=' ')
-            # if col == (2*n-1)+row*2-1 or col == (2*n-1)-row*2-1:
-            #     rs += chr(97+(n-row-1))
-            # else:  
-            #     rs += '-'
-              
-        print(rs)
-    
-if __name__ == '__main__':
-    n = int(input())
-    print_rangoli(n)
+        if row == n-1:
+            ll.extend(reversed(ll))
+            ll.insert(len(ll)//2, f"{'-'.join(chrlist)}".center(4*n-3, '-'))    
+        else:
+            ll.append(f"{'-'.join(chrlist)}".center(4*n-3, '-'))    
+    print('\n'.join(ll))
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_rangoli(n)
