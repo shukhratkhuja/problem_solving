@@ -16,7 +16,8 @@ for _ in range(n):
 for key, value in ordered_dictionary.items():
     print(key, value)
 
-"""    
+
+"""
 9
 BANANA FRIES 12
 POTATO CHIPS 30
@@ -27,5 +28,4 @@ CANDY 5
 CANDY 5
 CANDY 5
 POTATO CHIPS 30
-
 """
