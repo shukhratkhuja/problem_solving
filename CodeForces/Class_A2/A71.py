@@ -6,6 +6,6 @@ def way_too_long_words(word):
         return f"{word[0]}{len(word)-2}{word[-1]}"
     return word
 
-for i in range(n):
+for _ in range(n):
     word = input()
     print(way_too_long_words(word=word))
