@@ -4,3 +4,4 @@ if '1' in answers:
     print('HARD')
 else:
     print('EASY')
+
