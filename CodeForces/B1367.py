@@ -1,15 +1,21 @@
-t = int(input())
+def min_moves_to_good_array(n, arr):
+    wrong_even = 0  # Even index has odd value
+    wrong_odd = 0   # Odd index has even value
 
-def even_array(n, array):
-    array_copy = array.copy()
     for i in range(n):
-        for j in range(n):
-            if i % 2 == 0 and array_copy[i] % 2 == 0 or i % 2 == 0 and array_copy[i] % 2 == 0:
-                pass
-            else:
-                if i != n:
-                    array_copy[i], array_copy[i+1] = array_copy[i+1], array_copy[i]
+        if i % 2 == 0 and arr[i] % 2 == 1:
+            wrong_even += 1
+        elif i % 2 == 1 and arr[i] % 2 == 0:
+            wrong_odd += 1
 
+    if wrong_even == wrong_odd:
+        return wrong_even  # Minimum swaps needed
+    else:
+        return -1  # Impossible
 
+# Reading input
+t = int(input())  # Number of test cases
 for _ in range(t):
-    ...
+    n = int(input())
+    arr = list(map(int, input().split()))
+    print(min_moves_to_good_array(n, arr))
