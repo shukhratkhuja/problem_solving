@@ -12,5 +12,4 @@ for _ in range(t):
     else:
         results.append("NO")
 
-
 sys.stdout.write("\n".join(results) + "\n")
