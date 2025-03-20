@@ -15,13 +15,13 @@ class Node:
         current = self
 
         while current:
-            print(current.value)
+            # print(current.value)
             next_node = current.next
             current.next = prev
             prev = current
             current = next_node
-            prev.print()
-        prev.print()
+            # prev.print()
+        # prev.print()
         self = prev
         return prev
 
