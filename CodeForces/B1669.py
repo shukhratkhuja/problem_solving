@@ -1,20 +1,19 @@
 import sys
-from collections import Counter
-import sys
 from collections import defaultdict
 
 def solve():
     # Fast input
-    input = sys.stdin.read
-    data = input().split()
     
-    t = int(data[0])  # Testlar soni
+    input_data = sys.stdin.read().split()
+    
+    t = int(input_data[0])  # Testlar soni
     index = 1
-    res = []
+
+    results = []
 
     for _ in range(t):
-        n = int(data[index])  # Array uzunligi
-        arr = map(int, data[index + 1: index + 1 + n])
+        n = int(input_data[index])  # Array uzunligi
+        arr = map(int, input_data[index + 1: index + 1 + n])
         index += 1 + n
 
         freq = defaultdict(int)
@@ -26,10 +25,10 @@ def solve():
                 ans = num
                 break
 
-        res.append(str(ans))
+        results.append(str(ans))
 
     # Fast output
-    sys.stdout.write("\n".join(res) + "\n")
+    sys.stdout.write("\n".join(results) + "\n")
 
 solve()
 
