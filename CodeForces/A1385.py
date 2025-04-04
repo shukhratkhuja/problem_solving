@@ -22,4 +22,3 @@ for _ in range(t):
         sys.stdout.write("\nNO")
 
 sys.stdout.write("\n")
-
